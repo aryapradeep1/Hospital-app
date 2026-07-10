@@ -4,78 +4,76 @@ import axios from 'axios'
 
 const ViewPatients = () => {
 
-    const[data,changeData]=useState([])
-    const fetchData=() =>{
+  const [data, changeData] = useState([])
 
-      axios.get("https://raw.githubusercontent.com/anishpdm/demo-json-api/refs/heads/main/hospital-data.json").then(
+  const fetchData = () => {
+    axios.get("https://raw.githubusercontent.com/anishpdm/demo-json-api/refs/heads/main/hospital-data.json")
+      .then((response) => {
+        changeData(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
-            (Response)=>
-              changeData(Response.data)
+  useEffect(() => {
+    fetchData()
+  }, [])
 
-      ).catch()
-    }
-    useEffect(
-      ()=>{
-        fetchData()
-      },[]
-    )
   return (
     <div>
-        <NaviBar/>
-            <div className="container">
-                <div className="row">
-                    <div className="col col-12 col-sm-12 col-lg-12 col-xl-12 col xl-12 col-xxl-12">
+      <NaviBar />
 
-                        <div className="row">
-                           <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+      <div className="container mt-4">
+        <h2 className="text-center mb-4 text-primary">
+          🏥 View Patients
+        </h2>
 
-                                          <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Patient ID</th>
-      <th scope="col">name</th>
-      <th scope="col">Age</th>
-      <th scope="col">gender</th>
-      <th scope="col">Bloodgroup</th>
-      <th scope="col">Doctor</th>
-      <th scope="col">disease</th>
-      <th scope="col">room no</th>
-      <th scope="col">AdmissonDate</th>
-      <th scope="col">Mobile</th>
-    </tr>
-  </thead>
-  <tbody>
-                            {data.map(
-                                (value,index)=>{
-                                        return(
-                                            
-                                   
-    <tr>
-      <th scope="row">{value.patientId}</th>
-      <td>{value.name}</td>
-      <td>{value.age}</td>
-      <td>{value.gender}</td>
-      <td>{value.bloodGroup}</td>
-      <td>{value.doctor}</td>
-      <td>{value.disease}</td>
-      <td>{value.roomNo}</td>
-      <td>{value.admissionDate}</td>
-      <td>{value.mobile}</td>
-    </tr>
-   
-                                        )
-                                    }
-                            )}
-                            
-  </tbody>
-</table>
-                                      
-                                        </div>
-                        </div>
+        <div className="row g-4">
 
-                    </div>
+          {data.map((value, index) => {
+            return (
+
+              <div
+                className="col-12 col-sm-12 col-md-6 col-lg-4"
+                key={index}
+              >
+
+                <div className="card shadow-lg border-0 h-100">
+
+                  <div className="card-header bg-primary text-white text-center">
+                    <h5>{value.name}</h5>
+                  </div>
+
+                  <div className="card-body">
+
+                    <p><strong>Patient ID :</strong> {value.patientId}</p>
+                    <p><strong>Age :</strong> {value.age}</p>
+                    <p><strong>Gender :</strong> {value.gender}</p>
+                    <p><strong>Blood Group :</strong> {value.bloodGroup}</p>
+                    <p><strong>Doctor :</strong> {value.doctor}</p>
+                    <p><strong>Disease :</strong> {value.disease}</p>
+                    <p><strong>Room No :</strong> {value.roomNo}</p>
+                    <p><strong>Admission Date :</strong> {value.admissionDate}</p>
+                    <p><strong>Mobile :</strong> {value.mobile}</p>
+
+                  </div>
+
+                  <div className="card-footer text-center">
+                    <button className="btn btn-success">
+                      View Details
+                    </button>
+                  </div>
+
                 </div>
-            </div>
+
+              </div>
+
+            )
+          })}
+
+        </div>
+      </div>
 
     </div>
   )

@@ -9,8 +9,8 @@ const RegPatient = () => {
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                        <div className="row">
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <div className="row g-3">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                 <label htmlFor="" className="form-label">Patient Id:</label>
                                 <input type="text" className="form-control" />
@@ -18,7 +18,7 @@ const RegPatient = () => {
 
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Full name:</label>
                                 <input type="text" className="form-control" />
@@ -26,13 +26,13 @@ const RegPatient = () => {
 
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Age:</label>
                                 <input type="text" className="form-control" />
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Gender</label>
                                      male<input type="radio" name="gender" id="" />
@@ -40,20 +40,20 @@ const RegPatient = () => {
 
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
 
                                                  <label htmlFor="" className="form-label">Blood group:</label>
                                 <input type="text" className="form-control" />
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Mobile number::</label>
                                 <input type="text" className="form-control" />
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
 
                                      <label htmlFor="" className="form-label">Email address:</label>
@@ -61,7 +61,7 @@ const RegPatient = () => {
 
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
 
                                          <label htmlFor="" className="form-label">Disease:</label>
@@ -69,19 +69,19 @@ const RegPatient = () => {
 
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Doctor assisgned:</label>
                                 <input type="text" className="form-control" />
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Admisson date:</label>
                                 <input type="date" className="form-control" />
 
                             </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                      <label htmlFor="" className="form-label">Room number:</label>
                                 <input type="text" className="form-control" />
